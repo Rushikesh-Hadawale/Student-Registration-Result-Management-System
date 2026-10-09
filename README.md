@@ -155,33 +155,6 @@ Since the project is built using native standard **HTML5**, **CSS3**, and **Vani
 
 ---
 
-## 🎓 8. MCA Viva Voce & Practical Exam Questions
-
-### Q1: What is the purpose of `JSON.stringify()` and `JSON.parse()` in this project?
-**Answer:**
-- `JSON.stringify()` converts a JavaScript object or array (e.g., student details and marks) into a JSON-formatted string so it can be saved in `localStorage`, which only stores key-value pairs as strings.
-- `JSON.parse()` deserializes the stored JSON string back into a usable JavaScript object/array upon application loading, allowing array manipulation methods like `.filter()`, `.map()`, and `.sort()`.
-
-### Q2: What are the differences between `localStorage`, `sessionStorage`, and Cookies?
-**Answer:**
-- **LocalStorage**: Stores up to ~5–10MB of data with no expiration time; data persists across browser restarts and tabs under the same origin.
-- **SessionStorage**: Stores data only for the duration of the current browser tab session; data is cleared when the tab is closed.
-- **Cookies**: Typically limited to 4KB, sent to the server with every HTTP request, used mainly for authentication tokens and session management.
-
-### Q3: How is client-side validation implemented?
-**Answer:**
-Validation is executed in `validateStudentForm()` using:
-1. **Regular Expressions (Regex)** for email pattern validation (`/^[^\s@]+@[^\s@]+\.[^\s@]+$/`) and 10-digit mobile number validation (`/^[6-9]\d{9}$/`).
-2. **Bounds Checking** to ensure marks are strictly numeric and between $0$ and $100$.
-3. **Database Uniqueness Checking** to ensure no two students share the same PRN/Roll Number.
-4. **Real-time feedback** via `input` event listeners that clear errors as the user types.
-
-### Q4: How does the application support printing official marksheets?
-**Answer:**
-CSS3 `@media print` queries hide navigation headers, tabs, toolbar controls, action buttons, and background gradients. It formats the marksheet with high-contrast text, clear borders, and A4 portrait dimensions (`@page { size: A4 portrait; margin: 15mm; }`).
-
----
-
 ## 👨‍💻 Developed For
 - **Application**: StudentHub
 - **Course**: Master of Computer Applications (MCA)
